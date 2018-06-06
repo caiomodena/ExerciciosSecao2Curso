@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RH", "RH\RH.csproj", "{AE65007C-2D9F-42A8-9CCB-45D00D2743B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "Banco\Banco.csproj", "{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{AE65007C-2D9F-42A8-9CCB-45D00D2743B5}.Release|x64.Build.0 = Release|x64
 		{AE65007C-2D9F-42A8-9CCB-45D00D2743B5}.Release|x86.ActiveCfg = Release|x86
 		{AE65007C-2D9F-42A8-9CCB-45D00D2743B5}.Release|x86.Build.0 = Release|x86
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Debug|x64.ActiveCfg = Debug|x64
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Debug|x64.Build.0 = Debug|x64
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Debug|x86.ActiveCfg = Debug|x86
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Debug|x86.Build.0 = Debug|x86
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Release|x64.ActiveCfg = Release|x64
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Release|x64.Build.0 = Release|x64
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Release|x86.ActiveCfg = Release|x86
+		{CF6233A6-FE24-4E5E-8C15-660D21FDD1B6}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
