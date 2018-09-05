@@ -74,18 +74,30 @@ namespace Matrizes
          Console.WriteLine("Digite número para ser pesquisado na matriz: ");
          int numeroPesquisaMatriz = int.Parse(Console.ReadLine());
          bool numeroExiste = false;
+         int linhaNumeroEscolhido=0;
+         int colunaNumeroEscolhido=0;
          for(int i=0;i<numeroLinhas;i++)
          {
              for(int j=0;j<numeroColunas;j++)
              {
                  if(Matriz[i,j]==numeroPesquisaMatriz){
                      numeroExiste = true;
+                     linhaNumeroEscolhido = i;
+                     colunaNumeroEscolhido = j;
                  }
              }
          }
-         if(numeroExiste){
-             Console.WriteLine("Número Existe!");
+         if(!numeroExiste){
+             Console.WriteLine("Número não existe na matriz!");
+             return;
          }
+
+         Console.WriteLine("Esquerda: ");
+         Console.WriteLine(Matriz[linhaNumeroEscolhido,colunaNumeroEscolhido-1]);
+         Console.WriteLine("Direita: ");
+         Console.WriteLine(Matriz[linhaNumeroEscolhido,colunaNumeroEscolhido+1]);
+         Console.WriteLine("Abaixo: ");
+         Console.WriteLine(Matriz[linhaNumeroEscolhido+1,colunaNumeroEscolhido]);
       }
     }
 }
