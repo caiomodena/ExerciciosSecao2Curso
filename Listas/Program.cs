@@ -49,7 +49,24 @@ namespace Listas
 
             Console.WriteLine("Digite o CPF do funcionário que terá aumento: ");
             string cpfFuncionarioAumento = Console.ReadLine();
+
+            Console.WriteLine("Digite o percentual de aumento: ");
+            double percentualAumento = Double.Parse(Console.ReadLine());
+
+            foreach(Funcionario func in listaFuncionarios){
+                if(func.cpfFuncionario == cpfFuncionarioAumento){
+                    func.aumentarSalarioPorCpf(cpfFuncionarioAumento, percentualAumento);
+                }
+            }
+
+            Console.WriteLine("-------Listagem atualizada de funcionários-------");
+            foreach(Funcionario func in listaFuncionarios){
+                Console.WriteLine(func.mostraFuncionario());
+                //func.nomeFuncionario + 
+            }
+
             //Fim Exercício 2 
+
         }
     }
 }

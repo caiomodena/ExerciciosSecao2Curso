@@ -2,9 +2,9 @@
 namespace Listas{
 
     class Funcionario{
-        string nomeFuncionario {get;}
-        string cpfFuncionario {get;}        
-        double salarioFuncionario {get; set;}
+        public string nomeFuncionario {get;}
+        public string cpfFuncionario {get;}        
+        public double salarioFuncionario {get; set;}
         public Funcionario(string CPFFuncionario, string NomeFuncionario, double salarioFuncionario){
             this.cpfFuncionario = CPFFuncionario;
             this.nomeFuncionario = NomeFuncionario;
@@ -12,7 +12,12 @@ namespace Listas{
         }
 
         public void aumentarSalarioPorCpf(string CPFFuncionario, double percentualAumento){
-            salarioFuncionario += (salarioFuncionario * (salarioFuncionario/percentualAumento));
+            //salarioFuncionario += (salarioFuncionario * (salarioFuncionario/percentualAumento));
+            salarioFuncionario += (salarioFuncionario * (percentualAumento/100));
+        }
+
+        public string mostraFuncionario(){
+            return cpfFuncionario + ", " + nomeFuncionario + ", " + salarioFuncionario.ToString(); 
         }
 
          
