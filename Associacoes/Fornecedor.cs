@@ -9,5 +9,10 @@ namespace Associacoes{
             this.emailFornecedor = emailFornecedor;
             this.telefoneFornecedor = telefoneFornecedor;
         }
+        public override string ToString(){
+            return nomeFornecedor + ", "
+                + emailFornecedor + ", "
+                + telefoneFornecedor + ".";
+        }
     }
 }
