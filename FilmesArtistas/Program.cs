@@ -5,26 +5,28 @@ namespace FilmesArtistas{
         static void Main(string[] args)
         {
             int opcao = 0;
+            Tela tela = new Tela();
 
             while(opcao!=5){
-                Tela.mostrarMenu();
+                tela.mostrarMenu();
                 try{
                     opcao = int.Parse(Console.ReadLine());
                 }
                 catch(ModelException exp){
                     Console.WriteLine(exp.Message);
                 }
-                switch(opcao){
-                    case 1: Tela.listaArtistas();
-                            break;
-                    case 2: Tela.adicionaArtista();
-                            break;
-                    default: "Opção inexistente!";
-                             break;        
-
+                catch(Exception exp){
+                    Console.WriteLine(exp.Message + " Opção inexistente!");
                 }
-            }
-            Console.WriteLine("Fim!");
+                switch(opcao){
+                    case 1: tela.listaArtistas();
+                            break;
+                    case 2: tela.adicionaArtista();
+                            break;
+                    case 5: Console.WriteLine("Fim!");
+                            break;                    
+                }
+            }           
         }
     }
 }

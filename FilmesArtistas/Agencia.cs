@@ -17,11 +17,15 @@ namespace FilmesArtistas{
             listaArtistas.Add(artista);
         }
         public override string ToString(){
-            string saida = "LISTAGEM DE ARTISTAS";
+            ordenaLista();
+            string saida = "---------------"+"\n"+"LISTAGEM DE ARTISTAS";
             foreach(Artista artista in listaArtistas){
-                saida = "\n"+artista.ToString();
+                saida += "\n"+artista.ToString();
             }
             return saida;
+        }
+        void ordenaLista(){
+            listaArtistas.Sort();
         }
     }
 }
