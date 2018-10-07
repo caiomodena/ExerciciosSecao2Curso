@@ -16,6 +16,9 @@ namespace FilmesArtistas{
         public void adicionaArtistas(Artista artista){
             listaArtistas.Add(artista);
         }
+        public Artista retornaArtistaPorCodigo(int codigo){        
+            return listaArtistas.Find(art => art.codigoArtista == codigo);
+    }
         public override string ToString(){
             ordenaLista();
             string saida = "---------------"+"\n"+"LISTAGEM DE ARTISTAS";

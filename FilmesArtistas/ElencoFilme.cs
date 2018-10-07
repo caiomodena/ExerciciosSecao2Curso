@@ -4,20 +4,22 @@ namespace FilmesArtistas{
     class ElencoFilme{
         public List<Artista> listaArtistasFilme;
         public Filme filme;
-        public double descontoCache;
-    
-    public ElencoFilme(List<Artista> listaArtistasFilme,Filme filme){
-        this.listaArtistasFilme = listaArtistasFilme;
+        //public CacheArtistaFilme cacheArtistaFilme; 
+        public Agencia agencia;
+     
+    public ElencoFilme(Filme filme){
         this.filme = filme;
-    }
-    public int calculaCacheFilme(Artista artista){
-        return artista.cacheArtista()-descontoCache;
+        agencia = new Agencia();
     }
     public void adicionaArtistaFilme(Artista artista){
         listaArtistasFilme.Add(artista);
-    }
-    public Artista retornaArtistaPorCodigo(int codigo){
-        return listaArtistasFilme.Find(art => art.cacheArtista() == codigo);
+    }    
+    public override string ToString(){
+        string retorno="Participações:"+"\n";
+        foreach(Artista art in listaArtistasFilme){
+            retorno+=art.ToString();
+        }
+        return retorno;
     }
   }
 }

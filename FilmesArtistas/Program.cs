@@ -23,6 +23,14 @@ namespace FilmesArtistas{
                             break;
                     case 2: tela.adicionaArtista();
                             break;
+                    case 3: tela.adicionaFilme();
+                            try{
+                                tela.adicionaElencoFilme();
+                            }
+                            catch(ModelException excecao){
+                                Console.WriteLine(excecao.Message);
+                            }
+                            break;
                     case 5: Console.WriteLine("Fim!");
                             break;                    
                 }

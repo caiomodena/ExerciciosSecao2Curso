@@ -1,9 +1,9 @@
 using System;
 namespace FilmesArtistas{
     class Artista:IComparable{
-        int codigoArtista;
+        public int codigoArtista{get;}
         string nomeArtista;
-        double cacheArtista {get;}
+        public double cacheArtista {get;}
         public Artista(int codigoArtista,string nomeArtista,double cacheArtista){
             this.codigoArtista = codigoArtista;
             this.nomeArtista = nomeArtista;
