@@ -4,6 +4,7 @@ namespace FilmesArtistas{
         Agencia agencia;
         Filme filme;
         ElencoFilme elencoFilme;
+        CacheArtistaFilme cacheArtistaFilme;
         public Tela(){
             agencia = new Agencia();
         }        
@@ -55,6 +56,12 @@ namespace FilmesArtistas{
             elencoFilme.adicionaArtistaFilme(artista);
             Console.Write("Desconto: ");
             double descontoValorCache = double.Parse(Console.ReadLine());
+            cacheArtistaFilme = new CacheArtistaFilme(filme,artista,descontoValorCache);            
+        }
+        public void listaDadosFilme(){
+            Console.Write("Digite o código do filme: ");
+            int codigoFilme = int.Parse(Console.ReadLine());
+
         }
     }
 }
