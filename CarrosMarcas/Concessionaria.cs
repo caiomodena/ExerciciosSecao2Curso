@@ -9,6 +9,9 @@ namespace CarrosMarcas{
         public void cadastraMarcasPadrao(Marca marca){
             listaMarcas.Add(marca);
         }
+        public void cadastraMarca(Marca marca){
+            listaMarcas.Add(marca);
+        }
         public Marca retornaMarcaPorNome(string nomeMarca){
             return listaMarcas.Find(x => x.nomeMarca==nomeMarca);
         }

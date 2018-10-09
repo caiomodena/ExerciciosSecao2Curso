@@ -20,6 +20,8 @@ namespace CarrosMarcas
                             break;
                     case 2: tela.listaCarrosDeMarcaOrdenadamente(concessionaria);
                             break;
+                    case 3: tela.cadastraMarca(concessionaria);
+                            break;
                     case 7: Console.WriteLine("Fim!");
                             break; 
                 }

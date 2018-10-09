@@ -32,5 +32,15 @@ namespace CarrosMarcas{
             retorno+="------------------------------------";
             Console.WriteLine(retorno);
         }
+        public void cadastraMarca(Concessionaria concessionaria){
+            Console.WriteLine("Digite os dados da marca: ");
+            Console.Write("Código: ");
+            int codigoMarca = int.Parse(Console.ReadLine());
+            Console.Write("Nome: ");
+            string nomeMarca = Console.ReadLine();
+            Console.Write("País de Origem: ");
+            string paisOrigemMarca = Console.ReadLine();            
+            concessionaria.cadastraMarca(new Marca(codigoMarca,nomeMarca,paisOrigemMarca));
+        }
     }
 }
