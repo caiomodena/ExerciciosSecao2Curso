@@ -17,7 +17,7 @@ namespace CarrosMarcas{
         public void adicionaAcessorio(Acessorio acessorio){
             listaAcessorios.Add(acessorio);
         }  
-        public int precoTotal(){
+        public double precoTotal(){
             double precoTotal=precoBasicoCarro;
             foreach(Acessorio acessorio in listaAcessorios){
                 precoTotal+=acessorio.precoAcessorio;
@@ -29,10 +29,16 @@ namespace CarrosMarcas{
         {
             Carro outroCarro=(Carro)obj;
             int comparacao=modeloCarro.CompareTo(outroCarro.modeloCarro);
-            if(comparacao=0){
+            if(comparacao==0){
                 return -(precoTotal().CompareTo(outroCarro.precoTotal()));
             }
             return comparacao;        
+        }
+        public override string ToString(){
+            string retorno;
+            retorno = codigoCarro+", "+modeloCarro+
+                ", Ano:"+anoFabricacaoCarro+", Preço Básico: "+precoBasicoCarro;
+            return retorno;
         }
     }
 }

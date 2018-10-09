@@ -4,12 +4,19 @@ namespace CarrosMarcas{
     class Concessionaria{
         List<Marca> listaMarcas;
         public Concessionaria(){
-            listaMarcas=new List<Marca>();
-            cadastraMarcasPadrao();
+            listaMarcas=new List<Marca>();            
         }
-        void cadastraMarcasPadrao(){
-            listaMarcas.Add(new Marca(1,"Chevrolet","Estados Unidos"));
-            listaMarcas.Add(new Marca(2,"Renault","França"));
+        public void cadastraMarcasPadrao(Marca marca){
+            listaMarcas.Add(marca);
+        }
+        public Marca retornaMarcaPorNome(string nomeMarca){
+            return listaMarcas.Find(x => x.nomeMarca==nomeMarca);
+        }
+        public List<Marca> retornaListaMarcas(){
+            return listaMarcas;
+        }
+        public Marca retornaMarcaPorCodigo(int codigoMarca){
+            return listaMarcas.Find(x => x.codigoMarca==codigoMarca);
         }
     }
 }
