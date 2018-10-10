@@ -24,6 +24,10 @@ namespace CarrosMarcas
                             break;
                     case 4: tela.cadastraCarro(concessionaria);
                             break;
+                    case 5: tela.cadastraAcessorio(concessionaria);
+                            break;
+                    case 6: tela.listaDetalhesCarro(concessionaria);
+                            break;
                     case 7: Console.WriteLine("Fim!");
                             break; 
                 }

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 namespace CarrosMarcas{
     class Carro:IComparable{
-        int codigoCarro;
+        public int codigoCarro;
         string modeloCarro;
         int anoFabricacaoCarro;
         double precoBasicoCarro;
@@ -13,7 +13,8 @@ namespace CarrosMarcas{
             this.anoFabricacaoCarro=anoFabricacaoCarro;
             this.precoBasicoCarro=precoBasicoCarro;
             listaAcessorios=new List<Acessorio>();
-        }      
+        }    
+        public Carro(){}  
         public void adicionaAcessorio(Acessorio acessorio){
             listaAcessorios.Add(acessorio);
         }  
@@ -23,7 +24,7 @@ namespace CarrosMarcas{
                 precoTotal+=acessorio.precoAcessorio;
             }
             return precoTotal;
-        }
+        }        
 
         public int CompareTo(object obj)
         {
@@ -37,7 +38,15 @@ namespace CarrosMarcas{
         public override string ToString(){
             string retorno;
             retorno = codigoCarro+", "+modeloCarro+
-                ", Ano:"+anoFabricacaoCarro+", Preço Básico: "+precoBasicoCarro;
+                ", Ano:"+anoFabricacaoCarro+", Preço Básico: "+precoBasicoCarro
+                + ", Preço total: "+precoTotal();
+            if(listaAcessorios.Count>0){
+                retorno+="\n"+"Acessórios: ";
+                foreach(Acessorio acessorio in listaAcessorios){
+                    retorno+="\n"+acessorio.descricaoAcessorio+", Preço: "
+                        +acessorio.precoAcessorio;
+                }
+            }
             return retorno;
         }
     }

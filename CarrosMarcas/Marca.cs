@@ -24,6 +24,9 @@ namespace CarrosMarcas{
             retorno=codigoMarca+", "+nomeMarca+", País: "+paisOrigemMarca
                 +", Número de Carros: "+quantidadeCarros;
             return retorno;
-        }       
+        }  
+        public Carro retornaCarroPorCodigo(int codigoCarro){
+            return listaCarros.Find(x => x.codigoCarro==codigoCarro);
+        }     
     }
 }

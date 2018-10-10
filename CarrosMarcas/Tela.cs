@@ -60,5 +60,33 @@ namespace CarrosMarcas{
             double precoBasicoCarro = double.Parse(Console.ReadLine());
             marca.adicionaCarro(new Carro(codigoCarro,modeloCarro,anoCarro,precoBasicoCarro));
         }
+        public void cadastraAcessorio(Concessionaria concessionaria){
+            Console.WriteLine("Digite os dados do acessório: ");
+            Console.Write("Carro (código): ");
+            int codigoCarro = int.Parse(Console.ReadLine());
+            Carro carro = buscaCarroPorCodigo(codigoCarro,concessionaria);           
+            cadastraAcessorioCarro(carro);
+        }
+        void cadastraAcessorioCarro(Carro carro){
+            Console.Write("Descrição: ");
+            string descricaoAcessorio = Console.ReadLine();
+            Console.Write("Preço: ");
+            double precoAcessorio = double.Parse(Console.ReadLine());
+            carro.adicionaAcessorio(new Acessorio(descricaoAcessorio,precoAcessorio));
+        }
+        public void listaDetalhesCarro(Concessionaria concessionaria){
+            Console.Write("Digite o código do carro: ");
+            int codigoCarro=int.Parse(Console.ReadLine());
+            Carro carro = buscaCarroPorCodigo(codigoCarro,concessionaria);     
+            Console.WriteLine(carro.ToString());
+        }
+        Carro buscaCarroPorCodigo(int codigoCarro,Concessionaria concessionaria){            
+            Carro carro=new Carro();
+            List<Marca> listaMarcas = concessionaria.retornaListaMarcas();
+            foreach(Marca marca in listaMarcas){
+                carro = marca.retornaCarroPorCodigo(codigoCarro);
+            }
+            return carro;
+        }
     }
 }
