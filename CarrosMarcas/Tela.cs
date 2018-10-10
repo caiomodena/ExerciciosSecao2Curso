@@ -42,5 +42,23 @@ namespace CarrosMarcas{
             string paisOrigemMarca = Console.ReadLine();            
             concessionaria.cadastraMarca(new Marca(codigoMarca,nomeMarca,paisOrigemMarca));
         }
+        public void cadastraCarro(Concessionaria concessionaria){
+            Console.WriteLine("Digite os dados do carro: ");
+            Console.Write("Marca (código): ");
+            int codigoMarca = int.Parse(Console.ReadLine());
+            Marca marca = concessionaria.retornaMarcaPorCodigo(codigoMarca);
+            cadastraCarroMarca(marca);
+        }
+        void cadastraCarroMarca(Marca marca){
+            Console.Write("Código do carro: ");
+            int codigoCarro = int.Parse(Console.ReadLine());
+            Console.Write("Modelo: ");
+            string modeloCarro = Console.ReadLine();
+            Console.Write("Ano: ");
+            int anoCarro = int.Parse(Console.ReadLine());
+            Console.Write("Preço básico: ");
+            double precoBasicoCarro = double.Parse(Console.ReadLine());
+            marca.adicionaCarro(new Carro(codigoCarro,modeloCarro,anoCarro,precoBasicoCarro));
+        }
     }
 }
