@@ -1,4 +1,5 @@
 ﻿using System;
+using tabuleiro;
 
 namespace ProjetoXadrez
 {
@@ -6,7 +7,8 @@ namespace ProjetoXadrez
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Posicao posicao=new Posicao(3,4);
+            Console.WriteLine("Posição: "+posicao);
         }
     }
 }
