@@ -7,8 +7,7 @@ namespace ProjetoXadrez
     {
         static void Main(string[] args)
         {
-            Posicao posicao=new Posicao(3,4);
-            Console.WriteLine("Posição: "+posicao);
+            Tabuleiro tabuleiro=new Tabuleiro(8,8);
         }
     }
 }
