@@ -24,16 +24,12 @@ namespace ExercicioProdutosPedidos{
         }
         public void selecionaDadosPedido(){
             Console.WriteLine("Digite o código do pedido: ");
-            int codigoPedidoTela = int.Parse(Console.ReadLine());
-            selecionaPedidoEItens(codigoPedidoTela);
+            int codigoPedidoTela = int.Parse(Console.ReadLine());            
 
         }
         public override string ToString(){
             return "Pedido "+codigoPedido+", data: "+dataPedido;
         } 
-        private void selecionaPedidoEItens(int codigoPedidoTela){
-            
-        }
         
     }
 }
