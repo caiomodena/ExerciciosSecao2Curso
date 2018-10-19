@@ -11,5 +11,9 @@ namespace tabuleiro{
         public Peca peca(int linha,int coluna){
             return pecas[linha,coluna];
         }
+        public void colocarPeca(Peca peca, Posicao pos){
+            pecas[pos.linha,pos.coluna] = peca;
+            peca.posicao = pos;
+        }
     }
 }
