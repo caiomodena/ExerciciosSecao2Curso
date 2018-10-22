@@ -16,6 +16,12 @@ namespace ProjetoXadrez
                     Console.WriteLine();
                     Console.Write("Origem: ");
                     Posicao origem=Tela.lerPosicaoXadrez().toPosicao();
+
+                    bool[,] posicoesPossiveis=tabuleiro.tabuleiro.peca(origem).movimentosPossiveis();
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tabuleiro,posicoesPossiveis);
+
+                    Console.WriteLine();
                     Console.Write("Destino: ");
                     Posicao destino=Tela.lerPosicaoXadrez().toPosicao();
                     partida.executaMovimento(origem,destino);
