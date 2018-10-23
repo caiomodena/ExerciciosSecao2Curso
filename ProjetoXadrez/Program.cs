@@ -14,9 +14,13 @@ namespace ProjetoXadrez
                     Console.Clear();
                     Tela.imprimirTabuleiro(partida.tabuleiro);
                     Console.WriteLine();
+                    Console.WriteLine("Turno: "+partida.turno); 
+                    Console.WriteLine("Aguardando Jogada: "+partida.jogadorAtual); 
+                    Console.WriteLine();
                     Console.Write("Origem: ");
                     Posicao origem=Tela.lerPosicaoXadrez().toPosicao();
 
+                    partida.validarPosicaoDeOrigem(origem);
                     bool[,] posicoesPossiveis=tabuleiro.tabuleiro.peca(origem).movimentosPossiveis();
                     Console.Clear();
                     Tela.imprimirTabuleiro(partida.tabuleiro,posicoesPossiveis);
@@ -24,11 +28,13 @@ namespace ProjetoXadrez
                     Console.WriteLine();
                     Console.Write("Destino: ");
                     Posicao destino=Tela.lerPosicaoXadrez().toPosicao();
-                    partida.executaMovimento(origem,destino);
+                    partida.realizaJogada(origem,destino);
                 }
+                
             }
             catch(TabuleiroException ex){
                 Console.WriteLine(ex.Message); 
+                Console.ReadLine();
             }
         }
     }
