@@ -12,7 +12,8 @@ namespace ProjetoXadrez
                 PartidaDeXadrez partida = new PartidaDeXadrez();
                 while(!partida.terminada){
                     Console.Clear();
-                    Tela.imprimirTabuleiro(partida.tabuleiro);
+                    Tela.imprimirPartida(partida);
+                    
                     Console.WriteLine();
                     Console.WriteLine("Turno: "+partida.turno); 
                     Console.WriteLine("Aguardando Jogada: "+partida.jogadorAtual); 
