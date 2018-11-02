@@ -32,12 +32,14 @@ namespace ProjetoXadrez
                     partida.validarPosicaoDeDestino(origem,destino);
                     partida.realizaJogada(origem,destino);
                 }
-                
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
             catch(TabuleiroException ex){
                 Console.WriteLine(ex.Message); 
                 Console.ReadLine();
             }
         }
+        
     }
 }
