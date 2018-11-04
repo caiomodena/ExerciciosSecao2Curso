@@ -1,7 +1,7 @@
 using System;
 namespace ExercicioProdutosPedidos{
     class Produto{
-        public int codigoProduto {get;}
+        int codigoProduto {get;}
         string descricaoProduto;
         double precoProduto;
         public Produto(int codigoProduto,string descricaoProduto,double precoProduto){
